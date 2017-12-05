@@ -1,5 +1,5 @@
 // Time : O(n)
-// Space : O(1)
+// Space : O(n)
 
 class Solution {
 private:
@@ -7,13 +7,11 @@ private:
     vector<int> cache;
     const int INF = 987654321;
     int rob(vector<int>& nums, int index) {
-        if (index == n)
-            return 0;
-        if (index > n)
-            return -INF;
+        if (index == n) return 0;
+        if (index > n) return -INF;
+        
         int &ret = cache[index];
-        if (ret != -1)
-            return ret;
+        if (ret != -1) return ret;
         
         int result = nums[index];
         result = max(result, nums[index] + rob(nums, index + 2));
@@ -24,15 +22,7 @@ private:
 public:
     int rob(vector<int>& nums) {
         n = nums.size();
-        cache = vector<int>(n);
-        for (int i = 0; i < n; i++) {
-            cache[i] = -1;
-        }
-        
-        int result = 0;
-        result = max(result, rob(nums, 0));
-        result = max(result, rob(nums, 1));
-        
-        return result;
+        cache = vector<int>(n, -1);
+        return max(rob(nums, 0), rob(nums, 1));
     }
 };
