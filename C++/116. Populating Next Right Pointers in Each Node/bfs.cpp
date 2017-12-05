@@ -1,5 +1,5 @@
 // O(n) time
-// O(1) space
+// O(n) space
 
 /**
  * Definition for binary tree with next pointer.
