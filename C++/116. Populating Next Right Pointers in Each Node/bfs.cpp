@@ -1,3 +1,6 @@
+// O(n) time
+// O(1) space
+
 /**
  * Definition for binary tree with next pointer.
  * struct TreeLinkNode {
