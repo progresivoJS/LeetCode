@@ -1,3 +1,6 @@
+// Time : O(n)
+// Space : O(n)
+
 class Solution {
 public:
     int climb(int* cache, int n) {
@@ -14,7 +17,8 @@ public:
     int climbStairs(int n) {
         int* cache = new int[n + 1];
         memset(cache, -1, sizeof(int) * (n + 1));
-        
-        return climb(cache, n);
+        int ret = climb(cache, n);
+        delete[] cache;
+        return ret;
     }
 };
