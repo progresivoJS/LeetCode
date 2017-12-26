@@ -1,3 +1,6 @@
+// Time : O(?)
+// Space : O(1)
+
 class Solution {
 private:
     int searchWay(vector<int>& nums, int start, int target) {
