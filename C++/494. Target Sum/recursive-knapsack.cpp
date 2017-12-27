@@ -21,8 +21,8 @@ public:
         int sum = 0;
         for (int i : nums) sum += i;
         int newTarget = sum + S;
-        if (newTarget % 2 != 0) return 0;
-        newTarget /= 2;
+        if (newTarget & 1 || (newTarget >> 1) > sum) return 0;
+        newTarget >>= 1;
         
         cache = vector<vector<int> >(nums.size(), vector<int>(newTarget + 1, -1));
         int ret = knapsack(nums, 0, newTarget);
