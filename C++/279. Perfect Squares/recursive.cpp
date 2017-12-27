@@ -1,3 +1,6 @@
+// Time : O(n * sqrt(n))
+// Space : O(n)
+
 class Solution {
 private:
     vector<int> cache;
