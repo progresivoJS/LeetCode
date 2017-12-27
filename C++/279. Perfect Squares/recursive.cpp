@@ -1,4 +1,4 @@
-// Time : O(n * sqrt(n))
+// Time : O(n^(3/2))
 // Space : O(n)
 
 class Solution {
