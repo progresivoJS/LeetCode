@@ -15,11 +15,9 @@ public:
         
         for (int i = 1; i <= nums.size(); i++) {
             for (int j = 0; j <= target; j++) {
+                dp[i][j] = dp[i-1][j];
                 if (j >= nums[i - 1]) {
                     dp[i][j] = dp[i-1][j] + dp[i-1][j - nums[i - 1]];
-                }
-                else {
-                    dp[i][j] = dp[i-1][j];
                 }
             }
         }
