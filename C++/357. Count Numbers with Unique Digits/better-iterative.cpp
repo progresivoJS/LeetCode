@@ -1,4 +1,4 @@
-// Time : O(n)
+// Time : O(1)
 // Space : O(n)
 
 class Solution {
@@ -8,7 +8,7 @@ public:
         vector<int> dp(n + 1);
         dp[1] = 10;
         dp[2] = 81;
-        for (int i = 3; i <= n; i++) {
+        for (int i = 3; i <= n && i <= 10; i++) {
             dp[i] = dp[i - 1] * (11 - i);
         }
         int sum = 0;
