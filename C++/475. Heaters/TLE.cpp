@@ -1,4 +1,4 @@
-// Time : \[O(n^2logn)\]
+// Time : O(n^2logn)
 // Space : O(1)
 
 class Solution {
