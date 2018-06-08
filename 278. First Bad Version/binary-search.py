@@ -21,6 +21,6 @@ class Solution:
                 lo = mid + 1
         
         if not isBadVersion(lo):
-            return -1
+            return
 
         return lo
