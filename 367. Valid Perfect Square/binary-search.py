@@ -13,5 +13,4 @@ class Solution(object):
                 hi = mid
             else:
                 lo = mid + 1
-        print(lo)
         return lo * lo == num
