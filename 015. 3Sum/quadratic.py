@@ -29,8 +29,3 @@ class Solution(object):
                     k -= 1
             
         return ret
-
-
-sol = Solution()
-nums = [-2, 0, 0, 0, 2]
-print(sol.threeSum(nums))
