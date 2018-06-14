@@ -1,3 +1,5 @@
+# Time Complexity : O(mlogn)
+
 class Solution(object):
     def searchMatrix(self, matrix, target):
         """
